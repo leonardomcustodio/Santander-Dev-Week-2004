@@ -7,17 +7,17 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import br.com.leocustodio.sdw24.domain.model.Champions;
+import br.com.leocustodio.sdw24.domain.model.Champion;
 
 @SpringBootTest
 public class ListChampionsIntegrationTest {
 
     @Autowired
-    private ListChampionsUseCase listChampionsUseCase;
+    private ListChampionUseCase listChampionsUseCase;
 
     @Test
     public void testListChampions(){
-        List<Champions> champions = listChampionsUseCase.findAll();
+        List<Champion> champions = listChampionsUseCase.findAll();
 
         Assertions.assertEquals(12, champions.size());
     }

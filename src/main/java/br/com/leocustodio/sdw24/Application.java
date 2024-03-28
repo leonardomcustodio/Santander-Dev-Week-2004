@@ -4,7 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import br.com.leocustodio.sdw24.application.ListChampionsUseCase;
+import br.com.leocustodio.sdw24.application.AskChampionUseCase;
+import br.com.leocustodio.sdw24.application.ListChampionUseCase;
 import br.com.leocustodio.sdw24.domain.ports.ChampionsRepository;
 
 @SpringBootApplication
@@ -15,8 +16,13 @@ public class Application {
 	}
 
 	@Bean
-	public ListChampionsUseCase provListChampionsUseCase(ChampionsRepository repository){
-		return new ListChampionsUseCase(repository);
+	public ListChampionUseCase provListChampionsUseCase(ChampionsRepository repository){
+		return new ListChampionUseCase(repository);
+	}
+
+	@Bean
+	public AskChampionUseCase provAskChampionsUseCase(ChampionsRepository repository){
+		return new AskChampionUseCase(repository);
 	}
 
 }

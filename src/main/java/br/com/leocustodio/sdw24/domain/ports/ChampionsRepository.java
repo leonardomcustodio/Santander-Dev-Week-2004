@@ -3,11 +3,11 @@ package br.com.leocustodio.sdw24.domain.ports;
 import java.util.List;
 import java.util.Optional;
 
-import br.com.leocustodio.sdw24.domain.model.Champions;
+import br.com.leocustodio.sdw24.domain.model.Champion;
 
 public interface ChampionsRepository {
     
-    List<Champions> findAll();
+    List<Champion> findAll();
 
-    Optional<Champions> findById(Long id);
+    Optional<Champion> findById(Long id);
 }
