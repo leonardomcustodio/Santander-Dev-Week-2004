@@ -23,7 +23,8 @@ public class Application {
 	}
 
 	@Bean
-	public AskChampionUseCase provideAskChampionUseCase(ChampionsRepository repository, GenerativeAiService genAiService) {
+	public AskChampionUseCase provideAskChampionUseCase(ChampionsRepository repository,
+														GenerativeAiService genAiService) {
 		return new AskChampionUseCase(repository, genAiService);
 	}
 }
